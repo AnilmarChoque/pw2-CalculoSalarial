@@ -40,17 +40,21 @@ public abstract class Funcionario {
 	
 	public void calcularBonificacao()
 	{
-		
+		valorBonificacao = salarioFinal * 0.05;
 	}
 	
 	public void cadastrarFuncionario(String nome, String cpf, double salarioBase)
 	{
-		
+		this.nome = nome;
+		this.cpf = cpf;
+		this.salarioBase = salarioBase;
+		salarioFinal = 0;
+		valorBonificacao = 0;
 	}
 	
-	public abstract void listarFuncionario();
+	public abstract String listarFuncionario();
 	
-	public abstract void calcularSalarioFinal(double salarioFinal);
+	public abstract void calcularSalarioFinal(double A);
 	
 	public abstract String apresentarSalario();
 

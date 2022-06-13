@@ -11,9 +11,21 @@ public class Gerente extends Funcionario {
 		this.gratificacao = gratificacao;
 	}
 	
-	public abstract void listarFuncionario()
+	public String listarFuncionario()
 	{
+		return "" + getNome() + "\n" + getCpf() + "\n" + getSalarioBase();
+	}
+	
+	public void calcularSalarioFinal(double gratificacao, double salarioFinal)
+	{
+		this.gratificacao = gratificacao;
 		
+		salarioFinal = this.gratificacao + getSalarioBase() + getValorBonificacao();
+	}
+	
+	public String apresentarSalario()
+	{
+		return ""+ getNome() + "\n" + getSalarioBase() + "\n" + getSalarioFinal() + "\n" + getValorBonificacao() + "\n" + gratificacao + "\n" + getSalarioFinal();
 	}
 
 }
